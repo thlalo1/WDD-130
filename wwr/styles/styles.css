@@ -4,6 +4,8 @@
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+    background-color: rgb(221, 221, 221);
+    z-index: -99999;
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
