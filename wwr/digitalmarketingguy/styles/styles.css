@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat');
+
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #ff0000   ;
+    --secondary-color: #fff ;
+    --accent1-color: #e1e1e1;
+    --accent2-color: #717171;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Bebas Neue";
+    --paragraph-font: Montserrat, Helvetica, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: #000;  /* headlines on a white background */ 
+    --headline-color-on-color: #717171; /* headlines on a colored background */ 
+    --paragraph-color-on-white: #000; /* paragraph text on a white background */ 
+    --paragraph-color-on-black: #fff; /* paragraph text on a white background */ 
+    --paragraph-color-on-color: #717171; /* paragraph text on a colored background */ 
+    --paragraph-background-color: #e1e1e1  ;
+    --nav-link-color: #fff;
+    --nav-background-color: #717171;
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: #396E94;
+  }
+
+body {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url("../images/background.jpg");
+    margin: 0px;
+    overflow: auto;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #717171;
+    display: grid;
+    top: 200px;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas: 'footercredits footerdisclaimer footerlinks';
+    position: relative;
+}
+header {
+    width: 100%;
+    height: 50px;
+    margin: 0px;
+    
+    background: rgb(225,225,225);
+    background: linear-gradient(90deg,#717171, rgba(0,0,0,1) 58%);
+}
+header nav {
+    float: right;
+    margin-right: 5%;
+    height: 100%;
+}
+nav a {
+    margin: 5px;
+    padding: 5px;
+    background-color: #000;
+    color: var(--nav-link-color);
+    font-family: var(--heading-font);
+    font-size: 35px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.cta {
+    width: 70%;
+    background-color: #e1e1e1;
+    border-radius: 25px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    top: 150px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 50px;
+    font-family: var(--heading-font);
+}
+.ctabut{
+    background-color: red;
+    padding: 10px 100px 10px 100px;
+    font-family: var(--heading-font);
+    text-align: center;
+    font-size: 25px;
+    color: var(--paragraph-color-on-black);
+    border-radius: 25px;
+    border-style: none;
+}
+.footercredits{
+    grid-area: footercredits;
+    padding-top: 30px;
+    color: var(--paragraph-color-on-black);
+    font-family: var(--paragraph-font);
+    text-align: center;
+}
+.footerdisclaimer{
+    grid-area: footerdisclaimer;
+    padding-top: 30px;
+    color: var(--paragraph-color-on-black);
+    font-family: var(--heading-font);
+    text-align: center;
+    font-size: 25px;
+}
+.footerdisclaimer a{
+    text-decoration: none;
+    color: var(--paragraph-color-on-black);
+}
+.footerdisclaimer a:hover{
+    text-decoration: underline;
+}
+.footerlinks{
+    grid-area: footerlinks;
+    padding-top: 30px;
+    color: var(--paragraph-color-on-black);
+    font-family: var(--paragraph-font);
+    text-align: center;
+}
+.footerlinks a{
+    text-decoration: none;
+    color: var(--paragraph-color-on-black);
+}
+.footerlinks a:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    float: left;
+    width: 150px;
+    margin-left: 5%;
+    border-radius: 0px 0px 25px 25px;
+}
+.material-symbols-outlined {
+    margin-right: 5px;
+}
+.material-symbols-sharp {
+    font-size: 90px;
+}
+.message-box{
+    position: relative;
+    width: 100%;
+    top: 150px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template-areas: 'msgb msgb msgb';
+}
+.msgb{
+    grid-area: msgb;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 30px;
+}
+.page {
+    width: 90%;
+    background-color: #e1e1e1;
+    border-radius: 25px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-gap: 50px;
+    font-family: var(--heading-font);
+}
+.pageimg {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}

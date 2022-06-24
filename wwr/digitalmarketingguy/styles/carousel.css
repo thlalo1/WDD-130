@@ -1,0 +1,34 @@
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: -9999;
+  top: -100px;
+}
+/* Make the images invisible by default */
+.Containers {
+  display: none;
+}
+.slideimg {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
