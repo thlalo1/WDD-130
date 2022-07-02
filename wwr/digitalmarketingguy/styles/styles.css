@@ -65,7 +65,20 @@ nav a:hover {
     background-color: #fff;
     color: #000;
 }
-
+.cbar {
+    width: 90%;
+    background-color: #000000;
+    border-radius: 25px;
+    margin: auto;
+    padding: 25px;
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template: 1fr / 10% 90%;
+    grid-gap: 50px;
+    font-family: var(--paragraph-font);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .cta {
     width: 70%;
     background-color: #e1e1e1;
@@ -73,11 +86,12 @@ nav a:hover {
     margin: auto;
     padding: 25px;
     position: relative;
-    top: 150px;
+    top: 50px;
     display: grid;
     grid-template: 1fr / 1fr 1fr;
     grid-gap: 50px;
     font-family: var(--heading-font);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .ctabut{
     background-color: red;
@@ -141,16 +155,26 @@ nav a:hover {
 .message-box{
     position: relative;
     width: 100%;
-    top: 150px;
+    top: 0px;
     display: grid;
+    padding-top: 50px;
     grid-template: 1fr / 1fr 1fr 1fr;
     grid-template-areas: 'msgb msgb msgb';
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #e1e1e1;
 }
 .msgb{
     grid-area: msgb;
     text-align: center;
     font-family: var(--heading-font);
     font-size: 30px;
+}
+.msgb p{
+    margin-top: -75px;
+    text-align: center;
+    font-family: var(--paragraph-color-on-white);
+    font-size: 15px;
+    padding: 50px;
 }
 .page {
     width: 90%;
@@ -164,9 +188,21 @@ nav a:hover {
     grid-template: 1fr / 1fr 1fr;
     grid-gap: 50px;
     font-family: var(--heading-font);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .pageimg {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 300px;
+}
+.subtitle{
+    font-size: 30px;
+    text-align: right;
+    margin-top: -30px;
+    font-family: var(--paragraph-color-on-white);
+}
+.title {
+    font-size: 90px;
+    text-align: right;
+    margin: 0px
 }
