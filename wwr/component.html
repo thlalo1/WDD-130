@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Component</title>
+    <style>
+        #modalDialog {
+            z-index: 99998;
+            background-color: rgba(0, 0, 0, .85);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0px;
+            display: none;
+        }
+        .modalMsg {
+            z-index: 99999;
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 10px;
+            grid-template: 20% 60% 30% / 1fr;
+            display: none;
+        }
+        .modalMsg section {
+            margin: 10px;
+        }
+        .modalMsg button {
+            top: -50
+        }
+    </style>
+</head>
+<body>
+    <div id="modalDialogBox" class="modalMsg" style="width:30%;height:auto;">
+        <section style="grid-row: 1/1">
+            <h3>Modal Header</h3>
+        </section>
+        <section style="grid-row: 2/2">
+            <p>This is the modal dialog box if you click on the dark area this will hide the modal dialog box. Alternatively you can click the close button</p>
+        </section>
+        <section style="grid-row: 3/3">
+            <button id="modalButtonClose">Close Modal Dialog Box</button>
+        </section>
+    </div>
+    <div id="modalDialog">
+        
+    </div>
+    <h1>Component Demonstration Modal:</h1>
+    <p>A modal (also called a modal window or lightbox) is a web page element that displays in front of and deactivates all other page content. To return to the main content, the user must engage with the modal by completing an action or by closing it.</p>
+    <button id="modalButtonOpen">Open Example</button>
+    <script>
+        open = window.document.getElementById("modalButtonOpen")
+        close = window.document.getElementById("modalButtonClose")
+        modalDialogElem = window.document.getElementById("modalDialog")
+        modalDialogBox = window.document.getElementById("modalDialogBox")
+        open.addEventListener("click", function(){
+            
+            modalDialogElem.style.display = "block"
+            modalDialogBox.style.display = "grid"
+        })
+        close.addEventListener("click", function(){
+            modalDialogElem.style.display = "none"
+            modalDialogBox.style.display = "none"
+        })
+        modalDialogElem.addEventListener("click", function(){
+            modalDialogElem.style.display = "none"
+            modalDialogBox.style.display = "none"
+        })
+    </script>
+</body>
+</html>
